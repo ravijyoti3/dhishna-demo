@@ -1,0 +1,54 @@
+<html>
+    <head>
+    <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <center><div class="form_body">
+            <h1 id="form_head">DHISHNA <span style="color: palevioletred; text-shadow: 0 0 8px palevioletred;">EVENTS</span></h1>
+            <form id="dhishna-form">
+                <input type="text" placeholder="Name" name="name" autofocus><br>
+                <input type="text" placeholder="Caption" name="caption" autofocus><br>
+                <textarea name="description" id="description" placeholder="Enter Description Here!" cols="40" rows="5"></textarea><br>
+                <br>
+                <h5 id="ques">Is Regestration Open ?</h5>
+                <select name="reg" id="myopt">   
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            <h3 id="form_sub_head">Coordinator</h3>
+                <input type="text" placeholder="Name" name="c_name" autofocus><br>
+                <input type="text" placeholder="Phone no." name="c_phone" autofocus><br>
+                <input type="file" id="btn"><br>
+                <progress value="0" max=100 id="uploader">0%</progress><br><br>
+                <button id="submit" id="filebtn">Submit</button>
+            </form>
+        </div></center>
+    </body>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-app.js"></script>
+<script src="script.js"></script>
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-firestore.js"></script>
+
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCOriEwZSFn407K4dMp3Az0p7_1nbNUTUI",
+    authDomain: "dhishna-26447.firebaseapp.com",
+    databaseURL: "https://dhishna-26447.firebaseio.com",
+    projectId: "dhishna-26447",
+    storageBucket: "dhishna-26447.appspot.com",
+    messagingSenderId: "921942093809",
+    appId: "1:921942093809:web:6f692bdd20aeff439bde50",
+    measurementId: "G-9WY38E5C84"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore();
+  db.settings({ timestampsInSnapshots: true});
+  firebase.analytics();
+</script>
+</html>
